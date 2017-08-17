@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/bg_view"
+        layout="@layout/user_info_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bg_view"
+        android:padding="6dp" >
+
+        <ImageView
+            android:id="@+id/avator"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:scaleType="center"
+            android:src="@drawable/empty_photo" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/avator"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/name_text_size" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/avator"
+            android:textSize="@dimen/name_text_size" />
+
+        <com.homework.wechat.view.MyGridView
+            android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/avator"
+            android:horizontalSpacing="5dp"
+            android:numColumns="3"
+            android:paddingTop="5dp"
+            android:verticalSpacing="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/created_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gridView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/avator"
+            android:text="@string/time_text"
+            android:textSize="@dimen/time_text_size" />
+
+        <ImageButton
+            android:id="@+id/more_btn"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/gridView"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/comment"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/comment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/created_at"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/avator"
+            android:background="@color/colorCommentLayoutBg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

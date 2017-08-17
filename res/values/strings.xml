@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ImageDemo</string>
+    
+    <string name="app_pengyouquan">朋友圈</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="time_text">1小时前</string>
+    <string name="no_data">暂无数据</string>
+    <string name="loading">正在加载...</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <item type="id" name ="image_ulr"></item>
+</resources>
